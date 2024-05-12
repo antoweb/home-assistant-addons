@@ -16,8 +16,8 @@ export SOURCE_DIR="$(bashio::config 'sourceDir')"
 RESTORE="$(bashio::config 'restore')"
 
 #########USEFULE VARIABLES########
-export NOW=`date '+%F_%H:%M:%S'`
-
+export NOW=`date '+%F_%H_%M_%S'`
+export SOURCE_DIR_ABS="${SOURCE_DIR:1}"
 
 ###########
 ## MAIN  ##
@@ -47,7 +47,7 @@ else
     #echo "aws s3 sync ${SOURCE_DIR} ${BUCKET_NAME} --endpoint-url ${ENDPOINT_URL} --region ${REGION}"
     #aws s3 sync "${SOURCE_DIR}" "${BUCKET_NAME}" --endpoint-url "${ENDPOINT_URL}" --region "${REGION}"
 
-    tar cvzf /data/${NOW}_${SOURCE_DIR}.TAR.GZ "${SOURCE_DIR}"
+    tar cvzf /data/${NOW}_${SOURCE_DIR_ABS}.TAR.GZ "${SOURCE_DIR}/*"
     aws s3 sync /data/ "${BUCKET_NAME}" --endpoint-url "${ENDPOINT_URL}" --region "${REGION}"
 
 fi

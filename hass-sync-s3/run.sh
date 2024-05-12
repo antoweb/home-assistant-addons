@@ -47,7 +47,7 @@ else
     #echo "aws s3 sync ${SOURCE_DIR} ${BUCKET_NAME} --endpoint-url ${ENDPOINT_URL} --region ${REGION}"
     #aws s3 sync "${SOURCE_DIR}" "${BUCKET_NAME}" --endpoint-url "${ENDPOINT_URL}" --region "${REGION}"
 
-    tar cvzf /data/"${now}"_"${SOURCE_DIR}".TAR.GZ "${SOURCE_DIR}"
+    tar cvzf /data/${now}_${SOURCE_DIR}.TAR.GZ "${SOURCE_DIR}"
     aws s3 sync /data/ "${BUCKET_NAME}" --endpoint-url "${ENDPOINT_URL}" --region "${REGION}"
 
 fi

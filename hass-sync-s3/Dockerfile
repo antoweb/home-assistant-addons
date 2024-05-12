@@ -23,10 +23,7 @@ ENV LANG C.UTF-8
 
 
 # add aws-cli and deps
-RUN apk update \
-	&& apk add --update py-pip \
-	&& python -m pip install awscli
-
+RUN apk update && apk add --no-cache aws-cli
 COPY run.sh /run.sh
 
 RUN chmod 755 /run.sh

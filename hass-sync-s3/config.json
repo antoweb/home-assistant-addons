@@ -14,7 +14,7 @@
   "options": {
     "sourceDir": "/backup",
   	"bucketName": "myBucketName",
-    "endpointUrl": "YOUR S3 ENDPOINT",
+    "endpointUrl": "",
     "region": "eu-west-1",
   	"accessKey": null,
 	  "secretKey": null,

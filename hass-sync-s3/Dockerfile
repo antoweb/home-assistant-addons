@@ -29,6 +29,7 @@ RUN apk update && apk add \
   && pip install pip --upgrade \
   && pip install awscli
 
+  
 WORKDIR "/data"
 
 COPY run.sh /run.sh

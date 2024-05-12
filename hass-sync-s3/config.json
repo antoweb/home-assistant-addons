@@ -1,6 +1,6 @@
 {
   "name": "Hass Sync to S3",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "slug": "hass_sync_s3",
   "description": "Sync your source dir to s3 compatible object storage",
   "arch": ["armhf", "armv7", "aarch64", "amd64", "i386"],

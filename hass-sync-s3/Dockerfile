@@ -16,8 +16,9 @@
 #
 
 # Base docker image
-FROM alpine:latest
-MAINTAINER Denis Carriere <carriere.denis@gmail.com>
+ARG BUILD_FROM
+FROM $BUILD_FROM
+MAINTAINER Antoweb sistemistaitaliano@gmail.com
 
 RUN apk update && apk add \
 	ca-certificates \

@@ -12,7 +12,7 @@ Backup your home assistant backups to a s3 bucket (support local first encryptio
 
 Sync a source folder to an s3 compatible storage
 
-
+![image](https://drive.google.com/uc?export=view&id=1AyNQ_-akusDUn3O2jt9eykiNBEr3kc2Z)
 
 ## Issues
 

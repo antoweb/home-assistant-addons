@@ -20,8 +20,8 @@
 	  "secretKey": null,
 	  "GPGFingerprint": "",
     "GPGPassphrase":"",
-    "incrementalFor": "",
-    "removeOlderThan":"",
+    "incrementalFor": "1D",
+    "removeOlderThan":"100D",
     "restore": false
   },
   "schema": {

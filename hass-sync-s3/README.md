@@ -29,7 +29,7 @@ Follow these steps to get the add-on installed on your system:
 
 1. Navigate in your Home Assistant go to Settings/Addons and than click to ADDON-STORE low right corner, click on three dots upper right corner and click on Repositories
 
-![alt text](image.png)
+![Alt text](https://drive.google.com/file/d/1AyNQ_-akusDUn3O2jt9eykiNBEr3kc2Z/view?usp=sharing "a title")
 
 2. Paste the following url on the text box Add: https://github.com/antoweb/home-assistant-addons and clos
 3. Update Your Browser page and than you have a new repository

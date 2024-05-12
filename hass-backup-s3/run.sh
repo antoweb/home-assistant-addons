@@ -57,9 +57,9 @@ if [[ ${RESTORE} == "true" ]]; then
     "${BUCKET_NAME}" \
     "${SOURCE_DIR}"
 else
-    echo "Backuping $(ls -l /backup) to ${BUCKET_NAME}"
+    echo "Backuping $(ls -l /${SOURCE_DIR}) to ${BUCKET_NAME}"
 
-    duplicity incr --no-encryption --allow-source-mismatch --s3-endpoint-url "${ENDPOINT_URL}" --s3-region-name "${REGION}" --file-prefix-manifest manifest- ${DUPLICITY_FULL_BACKUP_AFTER} "${SOURCE_DIR}" "${BUCKET_NAME}"
+    duplicity full --no-encryption --allow-source-mismatch --s3-endpoint-url "${ENDPOINT_URL}" --s3-region-name "${REGION}" --file-prefix-manifest manifest- ${DUPLICITY_FULL_BACKUP_AFTER} "${SOURCE_DIR}" "${BUCKET_NAME}"
 
     if [[ -n ${DAY_BEFORE_REMOVING_OLD_BACKUP} ]]; then
         echo "Removing backup older than ${DAY_BEFORE_REMOVING_OLD_BACKUP} on ${BUCKET_NAME}"

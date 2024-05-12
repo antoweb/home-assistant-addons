@@ -23,14 +23,9 @@ ENV LANG C.UTF-8
 
 
 # add aws-cli and deps
-RUN apk add -v --update --no-cache \
-        python3 \
-        py3-pip \
-        groff \
-        less \
-        jq \
-        && \
-    pip3 install --upgrade awscli
+RUN apk update \
+	&& apk add --update py-pip \
+	&& python -m pip install awscli
 
 COPY run.sh /run.sh
 

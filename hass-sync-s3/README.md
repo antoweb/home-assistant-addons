@@ -27,8 +27,7 @@ Follow these steps to get the add-on installed on your system:
 
 1. Navigate in your Home Assistant go to Settings/Addons and than click to ADDON-STORE low right corner, click on three dots upper right corner and click on Repositories
 
-![Addon Store](images/addonstore.png)
-<img src="./images/addonstore.png">
+<img src="https://raw.githubusercontent.com/antoweb/home-assistant-addons/main/hass-sync-s3/images/addonstore.png" alt="Addon Store" loading="lazy">
 
 
 2. Paste the following url on the text box Add: https://github.com/antoweb/home-assistant-addons and clos

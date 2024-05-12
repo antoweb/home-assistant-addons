@@ -41,7 +41,7 @@ if [[ ${RESTORE} == "true" ]]; then
 else
     echo "Backuping $(ls -l /${SOURCE_DIR}) to ${BUCKET_NAME}"
 
-
+    echo 'aws s3 sync "${SOURCE_DIR}" "${BUCKET_NAME}" --endpoint-url "${ENDPOINT_URL}" --region "${REGION}"'
     aws s3 sync "${SOURCE_DIR}" "${BUCKET_NAME}" --endpoint-url "${ENDPOINT_URL}" --region "${REGION}"
 
 fi

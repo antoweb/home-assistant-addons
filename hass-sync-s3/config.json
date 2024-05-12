@@ -8,7 +8,7 @@
   "boot": "manual",
   "icon": "ico.png",
   "logo": "ico.png",
-  "map": ["backup:rw", "media:rw", "ssl", "homeassistant_config"],
+  "map": ["backup:rw", "media:rw", "ssl", "config"],
   "init": false,
   "apparmor": true,
   "options": {

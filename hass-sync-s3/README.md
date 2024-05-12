@@ -16,6 +16,10 @@ The goal of this addon is to sync a Home Assistant source folder such as /config
 
 It use the aws cli for achieve that
 
+This addon make a tar.gz of the source folder and upload it on your s3 bucket. After the tar.gz created locally will be deleted (attention for the docker architecture the tar.gz is deleted after some minutes, for this reason please wait almost 5 minutes before relaunch the addon otherwise you will have more than one file uploaded on the s4)
+
+This addon is a run-once application, means that the addon will be stopped after his work (tar gz and upload)
+
 
 ## Installation
 
@@ -108,6 +112,7 @@ Call this addon from your backup automations to trigger it :
 The service *hassio.addon_start* needs the addon slug to work. This is a concatenation of the first 8 char SHA1 hash of the repo url (lowercased) and the addon slug. If I ommit to update this part, you can check by yourself the hash part by taking the first 8 char of the hash here http://www.sha1-online.com/ filling "https://github.com/rbillon59/home-assistant-addons" in the form. It should not happen as the addons repository URL should not change. But in case of ..
 
 You can also launch it manually with the start button in the addon page !
+
 
 [comment]: <> ## If you need to restore the backup
 

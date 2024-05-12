@@ -15,11 +15,15 @@ export AWS_SECRET_ACCESS_KEY="$(bashio::config 'secretKey')"
 export SOURCE_DIR="$(bashio::config 'sourceDir')"
 RESTORE="$(bashio::config 'restore')"
 
+#########USEFULE VARIABLES########
+NOW=`date '+%F_%H:%M:%S'`
+
 
 ###########
 ## MAIN  ##
 ###########
 
+WORKDIR /data
 
 ############################
 ## SET AWS CLI COMMAND  ##
@@ -41,7 +45,10 @@ if [[ ${RESTORE} == "true" ]]; then
 else
     echo "Backuping $(ls -l /${SOURCE_DIR}) to ${BUCKET_NAME}"
 
-    echo "aws s3 sync ${SOURCE_DIR} ${BUCKET_NAME} --endpoint-url ${ENDPOINT_URL} --region ${REGION}"
-    aws s3 sync "${SOURCE_DIR}" "${BUCKET_NAME}" --endpoint-url "${ENDPOINT_URL}" --region "${REGION}"
+    #echo "aws s3 sync ${SOURCE_DIR} ${BUCKET_NAME} --endpoint-url ${ENDPOINT_URL} --region ${REGION}"
+    #aws s3 sync "${SOURCE_DIR}" "${BUCKET_NAME}" --endpoint-url "${ENDPOINT_URL}" --region "${REGION}"
+
+    tar cvzf /data/"${now}"_"${SOURCE_DIR}".TAR.GZ "${SOURCE_DIR}"
+    aws s3 sync /data/ "${BUCKET_NAME}" --endpoint-url "${ENDPOINT_URL}" --region "${REGION}"
 
 fi

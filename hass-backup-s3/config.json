@@ -1,6 +1,6 @@
 {
   "name": "Hass backup S3",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "slug": "hass_backup_s3",
   "description": "Backup your snapshots to S3 compatible object storage with local encryption and lifecycle policies",
   "arch": ["armhf", "armv7", "aarch64", "amd64", "i386"],
@@ -20,8 +20,8 @@
 	  "secretKey": null,
 	  "GPGFingerprint": "",
     "GPGPassphrase":"",
-    "incrementalFor": "7D",
-    "removeOlderThan":"14D",
+    "incrementalFor": "",
+    "removeOlderThan":"",
     "restore": false
   },
   "schema": {

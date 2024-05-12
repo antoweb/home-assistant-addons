@@ -33,8 +33,7 @@ Follow these steps to get the add-on installed on your system:
 2. Paste the following url on the text box Add: https://github.com/antoweb/home-assistant-addons and clos
 3. Update Your Browser page and than you have a new repository
 
-![New Repo](images/hass-newrepo.png)
-
+<img src="https://raw.githubusercontent.com/antoweb/home-assistant-addons/main/hass-sync-s3/images/hass-newrepo.png" alt="New Repo" loading="lazy">
 
 4. Click on "Hass Sync to S3" and install it
 
@@ -107,7 +106,8 @@ Call this addon from your backup automations to trigger it :
       data:
         addon: "053c5ba4_hass_sync_s3" -> Note this name can be chage so check on the Developers Tools/Service for the right name see below
 ```
-![Developer Tools Service](images/devtoolshassaddon.png)
+<img src="https://raw.githubusercontent.com/antoweb/home-assistant-addons/main/hass-sync-s3/images/devtoolshassaddon.png" alt="Developer Tools Service" loading="lazy">
+
 
 The service *hassio.addon_start* needs the addon slug to work. This is a concatenation of the first 8 char SHA1 hash of the repo url (lowercased) and the addon slug. If I ommit to update this part, you can check by yourself the hash part by taking the first 8 char of the hash here http://www.sha1-online.com/ filling "https://github.com/rbillon59/home-assistant-addons" in the form. It should not happen as the addons repository URL should not change. But in case of ..
 

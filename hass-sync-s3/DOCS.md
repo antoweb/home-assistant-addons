@@ -115,37 +115,5 @@ If you made it this far, you might want to let the add-on automatically
 check for updates by setting the `active` field (a subfield of `repeat`)
 to `true` and turning on "Start on boot."
 
-# How to generate GPG key (Optionnal) to encrypt locally before upload
-
-```shell
-gpg --gen-key
-```
-
-You will be asked a series of questions to configure your keys:
-
-Type of key. Select (1) RSA and RSA (default).
-Size of key. Pressing ENTER will confirm the default size of 2048 bits.
-Key expiration date. By entering 1y, we will create a key that expires after one year.
-Confirm your choices. You can do this by entering y.
-User ID/Real name. Enter your name.
-Email address. Enter your email address.
-Comment. Here, you can enter an optional comment that will be visible with your signature.
-Change (N)ame, ©omment, (E)mail or (O)kay/(Q)uit? Type O if you are ready to proceed.
-Enter passphrase. You will be asked to enter a passphrase here. Be sure to take note of this passphrase. We will refer back to it throughout the rest of this tutorial as your-GPG-key-passphrase.
-
-```bash
-Output
-...
-gpg: /home/sammy/.gnupg/trustdb.gpg: trustdb created
-gpg: key your-GPG-public-key-id marked as ultimately trusted
-public and secret key created and signed.
-...
-```
-
-your-GPG-public-key-id is the GPGFingerprint to put in your configuration
-and the GPGPassphrase is the password you typed during the key generation
-
-
---> See full details here : https://www.digitalocean.com/community/tutorials/how-to-use-duplicity-with-gpg-to-back-up-data-to-digitalocean-spaces
 
 

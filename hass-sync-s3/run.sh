@@ -49,6 +49,6 @@ else
 
     tar cvzf /data/${NOW}_${SOURCE_DIR_ABS}.tar.gz "${SOURCE_DIR}"
     aws s3 sync /data/ "${BUCKET_NAME}" --endpoint-url "${ENDPOINT_URL}" --region "${REGION}"
-    rm -f /data/*.tar.gz
-
+    rm -f /data/${NOW}_${SOURCE_DIR_ABS}.tar.gz
+    
 fi

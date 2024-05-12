@@ -1,5 +1,21 @@
 # How to create a bucket and get an Access key and Secret key
 
+## Idrive e2 1Tb for only about 20/30 $ Year
+
+Create account to https://www.idrive.com/s3-storage-e2/
+
+Go to https://app.idrivee2.com/dashboard
+
+And then create a bucket with :
+
+Bucket name : unique identifier
+Region : Ireland for example 
+
+You can choose also object lock, versioning etc...
+
+Npw got to https://app.idrivee2.com/access-key
+and create credentials (access key and secret access key)
+
 ## Scaleway (70GB free then €0.01/GB/month) --> Best choice
 
 Create an account at : https://console.scaleway.com/register or login if you already have one.

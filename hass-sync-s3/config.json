@@ -1,0 +1,32 @@
+{
+  "name": "Hass Sync to S3",
+  "version": "0.0.1",
+  "slug": "hass_sync_s3",
+  "description": "Sync your source dir to s3 compatible object storage",
+  "arch": ["armhf", "armv7", "aarch64", "amd64", "i386"],
+  "startup": "application",
+  "boot": "manual",
+  "icon": "ico.png",
+  "logo": "ico.png",
+  "map": ["backup:rw", "media:rw", "ssl:rw"],
+  "init": false,
+  "apparmor": true,
+  "options": {
+    "sourceDir": "/backup",
+  	"bucketName": "myBucketName",
+    "endpointUrl": "YOUR S3 ENDPOINT",
+    "region": "eu-west-1",
+  	"accessKey": null,
+	  "secretKey": null,
+    "restore": false
+  },
+  "schema": {
+    "sourceDir": "str",
+    "bucketName": "str",
+    "endpointUrl": "str",
+    "region": "str",
+    "accessKey": "str?",
+    "secretKey": "str?",
+    "restore": "bool"
+  }
+}

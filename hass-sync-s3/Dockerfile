@@ -28,7 +28,6 @@ RUN apk update && apk add \
 	&& rm -rf /var/cache/apk/* \
   && pip install pip --upgrade \
   && pip install awscli
-
   
 WORKDIR "/data"
 

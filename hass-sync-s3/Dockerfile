@@ -21,7 +21,6 @@ FROM ${BUILD_FROM}
 
 ENV LANG C.UTF-8
 
-COPY rootfs /
 
 # add aws-cli and deps
 RUN apk add -v --update --no-cache \

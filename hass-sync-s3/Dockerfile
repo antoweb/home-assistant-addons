@@ -21,6 +21,7 @@ FROM ${BUILD_FROM}
 
 ENV LANG C.UTF-8
 
+WORKDIR "/data"
 
 # add aws-cli and deps
 RUN apk update && apk add --no-cache aws-cli

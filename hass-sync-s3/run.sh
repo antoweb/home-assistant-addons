@@ -23,7 +23,6 @@ NOW=`date '+%F_%H:%M:%S'`
 ## MAIN  ##
 ###########
 
-WORKDIR "/data"
 
 ############################
 ## SET AWS CLI COMMAND  ##

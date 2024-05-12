@@ -17,20 +17,21 @@
 
 # Base docker image
 ARG BUILD_FROM
-FROM $BUILD_FROM
-MAINTAINER Antoweb sistemistaitaliano@gmail.com
+FROM ${BUILD_FROM}
 
-RUN apk update && apk add \
-	ca-certificates \
-	groff \
-	less \
-	python \
-	py-pip \
-	&& rm -rf /var/cache/apk/* \
-  && pip install pip --upgrade \
-  && pip install awscli
-  
-WORKDIR "/data"
+ENV LANG C.UTF-8
+
+COPY rootfs /
+
+# add aws-cli and deps
+RUN apk add -v --update --no-cache \
+        python3 \
+        py3-pip \
+        groff \
+        less \
+        jq \
+        && \
+    pip3 install --upgrade awscli
 
 COPY run.sh /run.sh
 

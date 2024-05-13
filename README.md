@@ -4,7 +4,7 @@ This repository contains all the addons I've created for home-assistant. It can 
 
 ## Available addons
 
-### hass-s6nc-s3
+### hass-sync-s3
 
 Tar GZ and Sync any home Assistant shared folder likes /backup, /config etc... to an s3 compatibile device
 

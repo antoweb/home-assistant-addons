@@ -4,13 +4,9 @@ This repository contains all the addons I've created for home-assistant. It can 
 
 ## Available addons
 
-### hass-backup-duplicity-s3
+### hass-s6nc-s3
 
-Backup your home assistant backups to a s3 bucket (support local first encryption through GPG)
-
-### -sync-s3
-
-Sync a source folder to an s3 compatible storage
+Tar GZ and Sync any home Assistant shared folder likes /backup, /config etc... to an s3 compatibile device
 
 
 
